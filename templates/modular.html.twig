@@ -5,9 +5,9 @@
 
 {% block content %}
     {{ page.content }}
-    <article id="main">
+    <div id="content">
         {% for module in page.collection() %}
                 {{ module.content }}
         {% endfor %}
-    </article>
+    </div>
 {% endblock %}
