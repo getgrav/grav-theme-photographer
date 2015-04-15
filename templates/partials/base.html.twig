@@ -65,5 +65,13 @@
             {% block content %}{% endblock %}
         {% endblock %}
 
+
+        <script src="{{ theme_url }}/js/bootstrap.min.js" type="text/javascript" ></script>
+        <script src="{{ theme_url }}/js/tm-scripts.js" type="text/javascript" ></script>
+
+        {% block footer %}
+             {% include 'partials/footer.html.twig' %}
+        {% endblock %}
+        
     </body>
 </html>
