@@ -268,7 +268,7 @@ header {
 	height: 4px;
 	display: inline-block;
 	top: 30px;
-	right: 23px;
+	left: 45%;
 	position: absolute;
 	z-index: 5;
 }
