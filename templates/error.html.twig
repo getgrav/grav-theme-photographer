@@ -1,0 +1,11 @@
+{% extends 'partials/base.html.twig' %}
+{% block content %}
+<article id="main">
+    <header class="special container">
+        <span class="icon fa-exclamation-triangle"></span>
+        <h2>Error {{ page.header.http_response_code }}</h2>
+        <p>{{ page.content }}</p>
+    </header>
+</article>
+{% endblock %}
+{% block footer %}{% endblock %}
