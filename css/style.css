@@ -645,6 +645,12 @@ hr.line1 {
 	float: left;
 	margin: 0 29px 10px 0;
 }
+.reserve_table img.figure {
+	padding: 0;
+	float: left !important;
+	margin: 0 20px 10px 0;
+	margin-top: 15px;
+}
 .reserve_table .m_bot2 {
 	margin-bottom: 64px;
 }
