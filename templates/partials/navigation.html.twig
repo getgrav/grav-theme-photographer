@@ -17,7 +17,7 @@
 {% endmacro %}
 
 <ul class="nav sf-menu">
-    {% if config.themes.deliver.dropdown.enabled %}
+    {% if config.themes.photographer.dropdown.enabled %}
         {{ _self.loop(pages) }}
         {% else %}
         {% for page in pages.children %}
@@ -60,4 +60,41 @@
                 {% endif %}
             </li>
         {% endfor %}
-    </ul>           
+    </ul>   
+
+
+<select class="select-menu">
+    <option value="#">Navigate to...</option>
+    {% if config.themes.photographer.dropdown.enabled %}
+        {{ _self.loop(pages) }}
+        {% else %}
+        {% for page in pages.children %}
+            {% if page.visible %}
+                {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
+                    <option value="{{ page.url }}">
+                        {{ page.menu|lower }}
+                    </option>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+        {% for mitem in site.menu %}
+            <option value="{{ mitem.link }}">
+                {{ mitem.text }}
+            </option>
+            {% if mitem.submenu %}
+                {% for sub1 in mitem.submenu %}
+                    <option value="{{ sub1.link }}">
+                        –{{ sub1.text }}
+                    </option>
+                    {% if sub1.submenu %}
+                        {% for sub2 in sub1.submenu %}
+                            <option value="{{ sub2.link }}">
+                                ––{{ sub2.text }}
+                            </option>
+                        {% endfor %}
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        {% endfor %}
+    </select>
+
