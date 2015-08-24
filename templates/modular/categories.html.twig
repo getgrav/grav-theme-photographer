@@ -9,7 +9,7 @@
                                 {% if category.title_position == 'top' %}
                                     <p>{{ category.title }}</p>
                                 {% endif %}
-                                <figure><img src="{{ theme_url }}/img/{{ category.image }}" alt=""></figure>
+                                <figure>{{ page.media[category.image] }}</figure>
                                 {% if category.title_position == 'bottom' %}
                                     <p>{{ category.title }}</p>
                                 {% endif %}
