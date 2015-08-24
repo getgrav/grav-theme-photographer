@@ -1,3 +1,9 @@
+# v1.1.0
+## 07/24/2015
+
+1. [](#improved)
+    * Moved images displayed on homepage from theme to page
+
 # v1.0.1
 ## 06/16/2015
 
