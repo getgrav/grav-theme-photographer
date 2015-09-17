@@ -1,3 +1,11 @@
+# v1.3.0
+## 08/25/2015
+
+1. [](#improved)
+    * Updated for new version of simple_form (Pereira Ricardo)
+    * Fix for markdown extra
+    * Minor fixes
+
 # v1.2.0
 ## 08/25/2015
 
