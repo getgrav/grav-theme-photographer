@@ -159,7 +159,7 @@ $(window).load(function() {
                             <ul id="filters" class="pagination option-set clearfix" data-option-key="filter">
                                 <li><a href="#filter" data-option-value="*" class="selected">Show all</a></li>
                                 {% for item in page.header.filters %}
-                                    <li><a href="#filter" data-option-value=".{{ item.name }}">{{ item.name }}</a></li>
+                                    <li><a href="#filter" data-option-value=".{{ item.name|replace({' ':'_'}) }}">{{ item.name }}</a></li>
                                 {% endfor %}
                             </ul>
                         </div>
