@@ -1,3 +1,9 @@
+# v1.x.x
+## xx/xx/2016
+
+1. [](#improved)
+    * Added french
+
 # v1.4.0
 ## 07/14/2016
 
@@ -6,7 +12,7 @@
     * Delete unused composer.json
 1. [](#bugfix)
     * Fix setting the page language in the html tag
-    
+
 # v1.3.0
 ## 09/17/2015
 
