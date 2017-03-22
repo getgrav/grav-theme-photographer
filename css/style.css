@@ -531,7 +531,9 @@ header {
 	margin-right: 20px;
 }
 .list3 li figure img {
-	width: 100%;
+    width: 188px;
+    height: 207px;
+    object-fit: cover;
 }
 .list3 li .info1 {
 	overflow: hidden;
