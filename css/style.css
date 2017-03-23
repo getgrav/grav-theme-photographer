@@ -458,8 +458,9 @@ header {
 .list1 li div figure img {
     position: relative;
     margin: -50% auto;
-    height: auto;
+    height: calc(100% + 3px);
     vertical-align: middle;
+	object-fit: cover;
 }
 .box1 {
 	background: #eb5368;
