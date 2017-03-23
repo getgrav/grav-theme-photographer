@@ -1531,6 +1531,7 @@ footer {
 	width: 100%;
 	float: none;
 	margin-right: 0;
+	text-align: center;
 }
 .list3 li .info1 {
 	overflow: hidden;
