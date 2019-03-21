@@ -1,5 +1,5 @@
 name: Photographer
-version: 1.4.0
+version: 1.5.0
 description: "Photographer is a Bootstrap 3.0 theme for Grav. It's a port of Free Bootstrap 3.0 Template by template-help.com."
 icon: group
 author:
@@ -12,6 +12,9 @@ keywords: photographer, theme, bootstrap, modern, fast, responsive, html5, css3
 bugs: https://github.com/getgrav/grav-theme-photographer/issues
 license: MIT
 
+dependencies:
+  - { name: grav, version: '>=1.5.10' }
+  
 form:
   validation: loose
   fields:
