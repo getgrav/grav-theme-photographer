@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ grav.language.getLanguage ?: 'en' }}">
+<html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
 <head>
     {% block head %}
         <meta charset="utf-8" />
@@ -18,7 +18,6 @@
                 {% endif %}
 
         {% endblock %}
-        {{ assets.css() }}
 
         {% block javascripts %}
             {% do assets.add('jquery',101) %}
@@ -41,7 +40,11 @@
             {% endif %}
 
         {% endblock %}
-        {{ assets.js() }}
+
+        {% block assets deferred %}
+            {{ assets.css()|raw }}
+            {{ assets.js()|raw }}
+        {% endblock %}
 
         <script>
         $(window).load( function(){
@@ -74,5 +77,6 @@
              {% include 'partials/footer.html.twig' %}
         {% endblock %}
 
+        {{ assets.js('bottom')|raw }} 
     </body>
 </html>
