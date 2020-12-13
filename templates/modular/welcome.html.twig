@@ -2,9 +2,9 @@
     <div class="container">
         <p class="title1">{{ page.header.title }}</p>
         <p class="title2">{{ page.header.description }}</p>
-        {{ content }}
+        {{ content|raw }}
         {% for button in page.header.buttons %}
             <a href="{{ button.url }}" class="{{ button.class }}">{{ button.text }}</a>
-        {% endfor %}            
+        {% endfor %}
     </div>
 </div>

@@ -10,10 +10,10 @@
             <div class="col-lg-3 col-md-5 col-sm-5 forminfo">
                 <div>
                     <h2 class="title404_1">Error {{ page.header.http_response_code }}</h2>
-                    {{ page.content }}
+                    {{ page.content|raw }}
                 </div>
-            </div>  
-          </div> 
+            </div>
+          </div>
         </div>
     </div>
 </div>
