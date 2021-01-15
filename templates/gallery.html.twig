@@ -1,47 +1,10 @@
 {% extends 'partials/base.html.twig' %}
 
-{% block head %}
-    <meta charset="utf-8" />
-    <title>{% if header.title %}{{ header.title }} | {% endif %}{{ site.title }}</title>
-    {% include 'partials/metadata.html.twig' %}
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="icon" type="image/png" href="{{ theme_url }}/img/favicon.ico" />
-
-    {% block stylesheets %}
-        {% do assets.addCss('theme://css/bootstrap.css') %}
-        {% do assets.addCss('theme://css/style.css') %}
-        {% do assets.addCss('theme://css/touchTouch.css') %}
-
-        {% if browser.getBrowser == 'msie' and browser.getVersion < 9 %}
-         {% do assets.addCss('theme://assets/tm/css/tm_docs.css') %}
-     {% endif %}
-
- {% endblock %}
- {{ assets.css() }}
-
- {% block javascripts %}
-    {% do assets.add('jquery',101) %}
-    {% do assets.addJs('theme://js/jquery-migrate-1.2.1.js') %}
-    {% do assets.addJs('theme://js/superfish.js') %}
-    {% do assets.addJs('theme://js/jquery.mobilemenu.js') %}
-    {% do assets.addJs('theme://js/jquery.easing.1.3.js') %}
-    {% do assets.addJs('theme://js/jquery.ui.totop.js') %}
-    {% do assets.addJs('theme://js/jquery.touchSwipe.min.js') %}
-    {% do assets.addJs('theme://js/jquery.equalheights.js') %}
-    {% do assets.addJs('theme://js/touchTouch.jquery.js') %}
-    {% do assets.addJs('theme://js/jquery.isotope.min.js') %}
-
-    {% if browser.getBrowser == 'msie' and browser.getVersion < 9 %}
-        {% do assets.addJs('theme://assets/assets/js/html5shiv.js') %}
-        {% do assets.addJs('theme://assets/assets/js/respond.min.js') %}
-    {% endif %}
-
-{% endblock %}
-{{ assets.js() }}
-
-<script>
-
-$(window).load(function() {  
+{% do assets.addCss('theme://css/touchTouch.css') %}
+{% do assets.addJs('theme://js/touchTouch.jquery.js') %}
+{% do assets.addJs('theme://js/jquery.isotope.min.js') %}
+{% set script %}
+$(window).load(function() {
     var $container = $('#container');
     //Run to initialise column sizes
     updateSize();
@@ -51,7 +14,7 @@ $(window).load(function() {
 
         $container.isotope({
             // options
-            itemSelector : '.element',  
+            itemSelector : '.element',
             layoutMode : 'masonry',
             transformsEnabled: true,
             columnWidth: function( containerWidth ) {
@@ -60,9 +23,9 @@ $(window).load(function() {
             }
         });
     });
-    
+
         // update columnWidth on window resize
-        $(window).smartresize(function(){  
+        $(window).smartresize(function(){
             updateSize();
             $container.isotope( 'reLayout' );
         });
@@ -96,7 +59,7 @@ $(window).load(function() {
         $itemWidth = Math.floor($itemWidth);
 
         $(".element").each(function(index){
-            $(this).css({"width":$itemWidth+"px"});             
+            $(this).css({"width":$itemWidth+"px"});
         });
 
 
@@ -130,7 +93,7 @@ $(window).load(function() {
       }
 
       return false;
-  });       
+  });
 
     };
 
@@ -138,15 +101,8 @@ $(window).load(function() {
         $('.thumb').touchTouch();
 
     });
-
-</script>
-
-{% if browser.getBrowser == 'msie' and browser.getVersion < 9 %}
-   <div style='text-align:center'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div>
-{% endif %}
-
-{% endblock head%}
-
+{% endset %}
+{% do assets.addInlineJs(script) %}
 
 {% block content %}
     <div id="content">
@@ -167,11 +123,11 @@ $(window).load(function() {
                             <div id="container" class="clearfix">
                                 {% for element in page.header.gallery  %}
                                     <div class="element transition {{ element.filter }}" data-category="transition">
-                                        <a href="{{ page.media[element.image].url }}" class="thumb"><figure class="img-polaroid">{{ page.media[element.image].resize(270, 190).html() }}</figure></a><span class="description">{{ element.description }}</span>
+                                        <a href="{{ page.media[element.image].url }}" class="thumb"><figure class="img-polaroid">{{ page.media[element.image].resize(270, 190).html()|raw }}</figure></a><span class="description">{{ element.description }}</span>
                                     </div>
                                 {% endfor %}
                             </div>
-                            {{ page.content }}
+                            {{ page.content|raw }}
                         </div>
                     </div>
                 </div>

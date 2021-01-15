@@ -5,7 +5,7 @@
                 {% for item in page.header.portfolio %}
                     <li class="col-lg-6 col-md-6 col-sm-6">
                         <div class="{{ item.class }}">
-                            <figure>{{ page.media[item.image] }}</figure>
+                            <figure>{{ page.media[item.image].html|raw }}</figure>
                             <div class="info1 maxheight">
                                 <p class="list3title1">{{ item.title1 }}</p>
                                 <p class="list3title2">{{ item.title2 }}</p>
@@ -15,7 +15,7 @@
                         </div>
                     </li>
                 {% endfor %}
-                {{ content }}
+                {{ content|raw }}
             </ul>
         </div>
     </div>

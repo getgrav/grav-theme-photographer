@@ -9,7 +9,7 @@
                                 {% if category.title_position == 'top' %}
                                     <p>{{ category.title }}</p>
                                 {% endif %}
-                                <figure>{{ page.media[category.image] }}</figure>
+                                <figure>{{ page.media[category.image].html|raw }}</figure>
                                 {% if category.title_position == 'bottom' %}
                                     <p>{{ category.title }}</p>
                                 {% endif %}
@@ -17,7 +17,7 @@
                         </div>
                     </li>
                 {% endfor %}
-                {{ content }}
+                {{ content|raw }}
             </ul>
         </div>
     </div>
