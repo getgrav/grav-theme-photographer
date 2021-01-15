@@ -1,4 +1,6 @@
 name: Photographer
+slug: photographer
+type: theme
 version: 1.5.0
 description: "Photographer is a Bootstrap 3.0 theme for Grav. It's a port of Free Bootstrap 3.0 Template by template-help.com."
 icon: group
