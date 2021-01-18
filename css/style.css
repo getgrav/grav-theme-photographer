@@ -449,6 +449,19 @@ header {
 	-webkit-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
+.list1 li div figure {
+    overflow: hidden;
+    width: 100%;
+    height: 250px;
+    line-height: 250px;
+}
+.list1 li div figure img {
+    position: relative;
+    margin: -50% auto;
+    height: calc(100% + 3px);
+    vertical-align: middle;
+	object-fit: cover;
+}
 .box1 {
 	background: #eb5368;
 }
@@ -519,7 +532,9 @@ header {
 	margin-right: 20px;
 }
 .list3 li figure img {
-	width: 100%;
+    width: 188px;
+    height: 207px;
+    object-fit: cover;
 }
 .list3 li .info1 {
 	overflow: hidden;
@@ -1516,6 +1531,7 @@ footer {
 	width: 100%;
 	float: none;
 	margin-right: 0;
+	text-align: center;
 }
 .list3 li .info1 {
 	overflow: hidden;

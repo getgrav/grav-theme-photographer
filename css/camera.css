@@ -49,7 +49,7 @@
 	display: none;
 }
 .cameraCont, .cameraContents {
-	height: 100%;
+	height: calc(100% + 25px);
 	position: relative;
 	width: 100%;
 	z-index: 1;	
@@ -61,6 +61,13 @@
 	right: 0;
 	top: 0;
 	width: 100%;
+}
+.cameraSlide img {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .camera_target {
