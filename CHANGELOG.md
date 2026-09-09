@@ -1,3 +1,9 @@
+# v1.5.2
+## 09/09/2026
+
+1. [](#bugfix)
+    * The contact form on the location page now uses Grav's own form template instead of the long-gone `simple_form` plugin, so the page renders a working form again. The form styling was rewritten to match, and `blueprints.yaml` was left at 1.5.0 by the previous release and is corrected here
+
 # v1.5.1
 ## 01/15/2021
 
