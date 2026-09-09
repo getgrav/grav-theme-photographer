@@ -678,25 +678,25 @@ hr.line2 {
 .pad_bot1 {
 	padding-bottom: 22px;
 }
-.reservation-form {
+form#contact {
 	position: relative;
 	vertical-align: top;
 	z-index: 1;
 	margin: 0 0 0;
 	top: 0;
 }
-.reservation-form .txt-form {
+form#contact .txt-form {
 	display: none;
 }
-.reservation-form .coll-1, .reservation-form .coll-2, .reservation-form .coll-3, .reservation-form .coll-4 {
+form#contact .coll-1, form#contact .coll-2, form#contact .coll-3, form#contact .coll-4 {
 	margin-bottom: 16px;
 	float: left;
 	width: 100%;
 }
-.reservation-form .coll-1, .reservation-form .coll-2, .reservation-form .coll-3, .reservation-form .coll-4 {
+form#contact .coll-1, form#contact .coll-2, form#contact .coll-3, form#contact .coll-4 {
 	margin-right: 0;
 }
-.reservation-form fieldset {
+form#contact fieldset {
 	top: 13px;
 	border: none;
 	padding: 0;
@@ -704,20 +704,19 @@ hr.line2 {
 	position: relative;
 	z-index: 10;
 }
-.reservation-form label {
+form#contact label {
 	display: block;
-	min-height: 45px;
 	position: relative;
 	margin: 0;
 	padding: 0;
 	float: left;
 	width: 100%;
 }
-.reservation-form .message {
+form#contact .message {
 	display: block;
 	width: 100%;
 }
-.reservation-form input {
+form#contact input {
 	padding: 9px 10px 8px;
 	margin: 0;
 	text-decoration: none;
@@ -738,7 +737,7 @@ hr.line2 {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
-.reservation-form textarea {
+form#contact textarea {
 	padding: 9px 10px 8px;
 	margin: 0;
 	text-decoration: none;
@@ -758,26 +757,28 @@ hr.line2 {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+	margin-bottom: 20px;
 }
-.reservation-form input {
+form#contact input {
 	height: 41px;
+	margin-bottom: 20px;
 }
-.reservation-form input:focus, .reservation-form textarea:focus {
+form#contact input:focus, form#contact textarea:focus {
 	-webkit-box-shadow: none !important;
 	box-shadow: none !important;
 	color: #adadad !important;
 	border: 1px solid #dbdbdb;
 }
-.reservation-form .area .error {
+form#contact .area .error {
 	float: none;
 }
-.reservation-form textarea {
+form#contact textarea {
 	width: 100%;
 	height: 135px;
 	resize: none;
 	overflow: auto;
 }
-.reservation-form .success {
+form#contact .success {
 	border: none;
 	display: none;
 	position: absolute;
@@ -794,7 +795,7 @@ hr.line2 {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
-.reservation-form .error, .reservation-form .empty {
+form#contact .error, form#contact .empty {
 	color: #f00;
 	font-size: 10px;
 	line-height: 1.2em;
@@ -807,26 +808,15 @@ hr.line2 {
 	top: 0px;
 	right: 0;
 }
-.reservation-form .message .error, .reservation-form .message .empty {
+form#contact .message .error, form#contact .message .empty {
 	top: 133px;
 }
-.reservation-form .buttons-wrapper {
-	margin: 33px 0 0;
-}
-.reservation-form .buttons-wrapper a {
-	float: right;
-	margin-left: 37px;
-	margin-right: 4px;
-}
-.reservation-form .buttons-wrapper a:hover {
-	text-decoration: none;
-}
-.reservation-form .buttons-wrapper p {
-	position: relative;
-	font-weight: 200;
-	display: inline-block;
-	color: #8b8b8b;
+form#contact .button {
+	color: #333;
+	background: #eee;
+	padding: 3px 10px;
 	text-transform: uppercase;
+	border: 1px solid #d8d7d5;
 }
 /*-- end reservation --*/
 /*------------------isotop items------------------*/
