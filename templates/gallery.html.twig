@@ -4,7 +4,7 @@
 {% do assets.addJs('theme://js/touchTouch.jquery.js') %}
 {% do assets.addJs('theme://js/jquery.isotope.min.js') %}
 {% set script %}
-$(window).load(function() {
+$(window).on('load', function() {
     var $container = $('#container');
     //Run to initialise column sizes
     updateSize();

@@ -26,14 +26,14 @@ if(window.orientation!=undefined){
   $('.sf-menu li').each(function(){
 
    if($(">ul", this)[0]){
-    $(">a", this).toggle(
-     function(){
-      return false;
-     },
-     function(){
+    // first tap opens the submenu, second tap follows the link
+    $(">a", this).on("click", function(){
+     if ($(this).data("sf-tapped")) {
       window.location.href = $(this).attr("href");
      }
-    );
+     $(this).data("sf-tapped", true);
+     return false;
+    });
    } 
   })
  }
