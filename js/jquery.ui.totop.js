@@ -65,4 +65,4 @@
 };
 })(jQuery);
 
-$(window).load(function(){$().UItoTop({easingType: 'easeOutQuart'});})
+$(window).on('load', function(){$().UItoTop({easingType: 'easeOutQuart'});})

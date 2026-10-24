@@ -21,7 +21,6 @@
 
         {% block javascripts %}
             {% do assets.add('jquery',101) %}
-            {% do assets.addJs('theme://js/jquery-migrate-1.2.1.js') %}
             {% do assets.addJs('theme://js/superfish.js') %}
             {% do assets.addJs('theme://js/jquery.easing.1.3.js') %}
             {% do assets.addJs('theme://js/jquery.mobilemenu.js') %}
@@ -47,9 +46,11 @@
         {% endblock %}
 
         <script>
-        $(window).load( function(){
+        $(window).on('load', function(){
 
-         jQuery('.camera_wrap').camera();
+         if (jQuery('.camera_wrap').length) {
+             jQuery('.camera_wrap').camera();
+         }
 
      });
         </script>

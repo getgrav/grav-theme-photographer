@@ -1,3 +1,11 @@
+# v1.5.4
+## 10/24/2026
+
+1. [](#bugfix)
+    * Updated the theme's JavaScript to work with jQuery 3, which current Grav versions load
+    * The home page slider and the gallery's grid and filters work again
+    * Stopped loading the old jQuery Migrate script, which the theme no longer needs
+
 # v1.5.3
 ## 10/23/2026
 
