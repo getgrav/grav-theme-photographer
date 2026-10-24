@@ -1,3 +1,9 @@
+# v1.5.3
+## 10/23/2026
+
+1. [](#bugfix)
+    * The footer address and the map on the location page render again on Grav 2 instead of showing their HTML as text
+
 # v1.5.2
 ## 09/09/2026
 
